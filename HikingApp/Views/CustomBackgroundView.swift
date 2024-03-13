@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - View Constans
+
 private enum Constants {
     enum Rectangle {
         static let cornerRadius: CGFloat = 40
@@ -18,25 +20,30 @@ private enum Constants {
     }
 }
 
+// MARK: - Custom Background View
+
 struct CustomBackgroundView: View {
     var body: some View {
         ZStack {
             // MARK: - Depth Color
             
-            ThemeFactory.color(.colorGreenDark)
+            Color(.colorGreenDark)
                 .clipShape(RoundedRectangle(cornerRadius: Constants.Rectangle.cornerRadius))
                 .offset(y: Constants.Offset.depth)
             
             // MARK: - Light Color
             
-            ThemeFactory.color(.colorGreenLight)
+            Color(.colorGreenLight)
                 .clipShape(RoundedRectangle(cornerRadius: Constants.Rectangle.cornerRadius))
                 .offset(y: Constants.Offset.light)
             
             // MARK: - Surface
             
             LinearGradient(
-                themeColors: [.colorGreenLight, .colorGreenMedium],
+                colors: [
+                    .colorGreenLight,
+                    .colorGreenMedium
+                ],
                 startPoint: .top,
                 endPoint: .bottom
             )

@@ -7,9 +7,13 @@
 
 import SwiftUI
 
+// MARK: - View Constants
+
 private enum Constants {
-    enum Circle {
-        static let size: CGFloat = 256
+    enum Circle { static let size: CGFloat = 256 }
+    
+    enum Text {
+        static let titleSize: CGFloat = 52
     }
     
     enum Card {
@@ -18,23 +22,52 @@ private enum Constants {
     }
 }
 
+// MARK: - Card View
+
 struct CardView: View {
     var body: some View {
         ZStack {
             CustomBackgroundView()
             
-            Circle()
-                .fill(
-                    LinearGradient(
-                        themeColors: [.colorIndigoMedium, .colorOrangeMedium],
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
+            VStack {
+                Text("Hiking")
+                    .fontWeight(.black)
+                    .font(.system(size: Constants.Text.titleSize))
+                    .foregroundStyle(
+                        LinearGradient(
+                            colors: [
+                                .colorGrayLight,
+                                .colorGrayMedium
+                            ],
+                            startPoint: .top,
+                            endPoint: .bottom
+                        )
                     )
-                )
-                .frame(width: Constants.Circle.size)
-            
-            ThemeFactory.image(.image1)
-                .scaledToFit()
+                
+                Text("some")
+                    .multilineTextAlignment(.leading)
+                    .italic()
+                    .foregroundStyle(.colorGrayMedium)
+                
+                ZStack {
+                    Circle()
+                        .fill(
+                            LinearGradient(
+                                colors: [
+                                    .colorIndigoMedium,
+                                    .colorOrangeMedium
+                                ],
+                                startPoint: .topLeading,
+                                endPoint: .bottomTrailing
+                            )
+                        )
+                        .frame(width: Constants.Circle.size)
+                    
+                    Image(.image1)
+                        .resizable()
+                        .scaledToFit()
+                }
+            }
         }
         .frame(width: Constants.Card.width,
                height: Constants.Card.height)

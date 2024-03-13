@@ -12,14 +12,6 @@
 		333A921E2BA0CDC300CC7993 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 333A921D2BA0CDC300CC7993 /* Assets.xcassets */; };
 		333A92212BA0CDC300CC7993 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 333A92202BA0CDC300CC7993 /* Preview Assets.xcassets */; };
 		333A922A2BA0CE5900CC7993 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A92292BA0CE5900CC7993 /* CardView.swift */; };
-		333A922D2BA0D01400CC7993 /* ThemeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A922C2BA0D01400CC7993 /* ThemeFactory.swift */; };
-		333A922F2BA0D03C00CC7993 /* ThemeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A922E2BA0D03C00CC7993 /* ThemeColors.swift */; };
-		333A92312BA0D10200CC7993 /* ThemeFactoryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A92302BA0D10200CC7993 /* ThemeFactoryProtocols.swift */; };
-		333A92332BA0D16500CC7993 /* ThemeImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A92322BA0D16500CC7993 /* ThemeImages.swift */; };
-		333A92352BA0D27300CC7993 /* ThemeIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A92342BA0D27300CC7993 /* ThemeIcons.swift */; };
-		333A92382BA0D30200CC7993 /* View+ThemeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A92372BA0D30200CC7993 /* View+ThemeFactory.swift */; };
-		333A923A2BA0FEC100CC7993 /* String+FirstUppercased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A92392BA0FEC100CC7993 /* String+FirstUppercased.swift */; };
-		333A923C2BA101C400CC7993 /* LinearGradient+ThemeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A923B2BA101C400CC7993 /* LinearGradient+ThemeFactory.swift */; };
 		333A923E2BA1057900CC7993 /* CustomBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A923D2BA1057900CC7993 /* CustomBackgroundView.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,14 +22,6 @@
 		333A921D2BA0CDC300CC7993 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		333A92202BA0CDC300CC7993 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		333A92292BA0CE5900CC7993 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		333A922C2BA0D01400CC7993 /* ThemeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFactory.swift; sourceTree = "<group>"; };
-		333A922E2BA0D03C00CC7993 /* ThemeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColors.swift; sourceTree = "<group>"; };
-		333A92302BA0D10200CC7993 /* ThemeFactoryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFactoryProtocols.swift; sourceTree = "<group>"; };
-		333A92322BA0D16500CC7993 /* ThemeImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeImages.swift; sourceTree = "<group>"; };
-		333A92342BA0D27300CC7993 /* ThemeIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeIcons.swift; sourceTree = "<group>"; };
-		333A92372BA0D30200CC7993 /* View+ThemeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ThemeFactory.swift"; sourceTree = "<group>"; };
-		333A92392BA0FEC100CC7993 /* String+FirstUppercased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+FirstUppercased.swift"; sourceTree = "<group>"; };
-		333A923B2BA101C400CC7993 /* LinearGradient+ThemeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LinearGradient+ThemeFactory.swift"; sourceTree = "<group>"; };
 		333A923D2BA1057900CC7993 /* CustomBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,7 +55,6 @@
 		333A92182BA0CDC100CC7993 /* HikingApp */ = {
 			isa = PBXGroup;
 			children = (
-				333A92282BA0CDF900CC7993 /* Helpers */,
 				333A92272BA0CDEB00CC7993 /* Views */,
 				333A92192BA0CDC100CC7993 /* HikingApp.swift */,
 				333A921B2BA0CDC100CC7993 /* ContentView.swift */,
@@ -96,37 +79,6 @@
 				333A923D2BA1057900CC7993 /* CustomBackgroundView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		333A92282BA0CDF900CC7993 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				333A92362BA0D2E900CC7993 /* Extensions */,
-				333A922B2BA0CFF600CC7993 /* ThemeFactory */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		333A922B2BA0CFF600CC7993 /* ThemeFactory */ = {
-			isa = PBXGroup;
-			children = (
-				333A92302BA0D10200CC7993 /* ThemeFactoryProtocols.swift */,
-				333A922C2BA0D01400CC7993 /* ThemeFactory.swift */,
-				333A922E2BA0D03C00CC7993 /* ThemeColors.swift */,
-				333A92322BA0D16500CC7993 /* ThemeImages.swift */,
-				333A92342BA0D27300CC7993 /* ThemeIcons.swift */,
-			);
-			path = ThemeFactory;
-			sourceTree = "<group>";
-		};
-		333A92362BA0D2E900CC7993 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				333A92372BA0D30200CC7993 /* View+ThemeFactory.swift */,
-				333A92392BA0FEC100CC7993 /* String+FirstUppercased.swift */,
-				333A923B2BA101C400CC7993 /* LinearGradient+ThemeFactory.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,17 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				333A922F2BA0D03C00CC7993 /* ThemeColors.swift in Sources */,
-				333A923A2BA0FEC100CC7993 /* String+FirstUppercased.swift in Sources */,
-				333A922D2BA0D01400CC7993 /* ThemeFactory.swift in Sources */,
 				333A923E2BA1057900CC7993 /* CustomBackgroundView.swift in Sources */,
-				333A923C2BA101C400CC7993 /* LinearGradient+ThemeFactory.swift in Sources */,
-				333A92382BA0D30200CC7993 /* View+ThemeFactory.swift in Sources */,
-				333A92352BA0D27300CC7993 /* ThemeIcons.swift in Sources */,
 				333A922A2BA0CE5900CC7993 /* CardView.swift in Sources */,
 				333A921C2BA0CDC100CC7993 /* ContentView.swift in Sources */,
-				333A92332BA0D16500CC7993 /* ThemeImages.swift in Sources */,
-				333A92312BA0D10200CC7993 /* ThemeFactoryProtocols.swift in Sources */,
 				333A921A2BA0CDC100CC7993 /* HikingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
