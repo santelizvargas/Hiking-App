@@ -11,7 +11,7 @@ struct MotionAnimationView: View {
     
     private typealias Constants = MotionAnimationConstants
     
-    @State private var randomCircle: Int = Int.random(in: Constants.Circle.start...Constants.Circle.end)
+    @State private var randomCircle: Int = Int.random(in: Constants.Circle.min...Constants.Circle.max)
     @State private var isAnimating: Bool = false
     
     var body: some View {
@@ -43,22 +43,22 @@ struct MotionAnimationView: View {
     }
     
     private var randomSpeed: Double {
-        Double.random(in: Constants.Speed.start...Constants.Speed.end)
+        Double.random(in: Constants.Speed.min...Constants.Speed.max)
     }
     
     private var randomDelay: Double {
-        Double.random(in: Constants.Delay.start...Constants.Delay.end)
+        Double.random(in: Constants.Delay.min...Constants.Delay.max)
     }
     
     private var randomScale: CGFloat {
-        CGFloat.random(in: Constants.Scale.start...Constants.Scale.end)
+        CGFloat.random(in: Constants.Scale.min...Constants.Scale.max)
     }
     
     private var randomSize: CGFloat {
-        CGFloat.random(in: Constants.Size.start...Constants.Size.end)
+        CGFloat.random(in: Constants.Size.min...Constants.Size.max)
     }
     private var randomCoordinate: CGFloat {
-        CGFloat.random(in: Constants.Coordinate.start...Constants.Coordinate.end)
+        CGFloat.random(in: Constants.Coordinate.min...Constants.Coordinate.max)
     }
 }
 
