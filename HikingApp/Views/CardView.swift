@@ -14,6 +14,11 @@ private enum Constants {
     enum Text { static let titleSize: CGFloat = 52 }
     enum Header { static let horizontalPadding: CGFloat = 30 }
     
+    enum Image {
+        static let name: String = "image-{0}"
+        static let placeholderName: String = "{0}"
+    }
+    
     enum Card {
         static let width: CGFloat = 320
         static let height: CGFloat = 570
@@ -23,6 +28,10 @@ private enum Constants {
 // MARK: - Card View
 
 struct CardView: View {
+    
+    @State private var randomNumber: Int = 1
+    @State private var imageNumber: Int = 1
+    
     var body: some View {
         ZStack {
             CustomBackgroundView()
@@ -72,7 +81,11 @@ struct CardView: View {
         .padding(.horizontal, Constants.Header.horizontalPadding)
     }
     
+    @ViewBuilder
     private var imageGradientCircle: some View {
+        let imageName = Constants.Image.name
+            .replacingOccurrences(of: Constants.Image.placeholderName,
+                                  with: "\(imageNumber)")
         ZStack {
             Circle()
                 .fill(
@@ -87,14 +100,18 @@ struct CardView: View {
                 )
                 .frame(width: Constants.Circle.size)
             
-            Image(.image1)
+            Image(imageName)
                 .resizable()
                 .scaledToFit()
+                .animation(.default,
+                           value: imageNumber)
         }
     }
     
     private var exploreMoreButton: some View {
-        Button { } label: {
+        Button {
+            getRandomImage()
+        } label: {
             Text(NSLocalizatedString(.exploreMore))
                 .fontWeight(.heavy)
                 .font(.title2)
@@ -110,6 +127,14 @@ struct CardView: View {
                 )
         }
         .buttonStyle(GradientButton())
+    }
+    
+    private func getRandomImage() {
+        repeat {
+            randomNumber = Int.random(in: 1...5)
+        } while randomNumber == imageNumber
+        
+        imageNumber = randomNumber
     }
 }
 
