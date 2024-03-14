@@ -13,6 +13,8 @@
 		333A92212BA0CDC300CC7993 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 333A92202BA0CDC300CC7993 /* Preview Assets.xcassets */; };
 		333A922A2BA0CE5900CC7993 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A92292BA0CE5900CC7993 /* CardView.swift */; };
 		333A923E2BA1057900CC7993 /* CustomBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A923D2BA1057900CC7993 /* CustomBackgroundView.swift */; };
+		333A92402BA166D600CC7993 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A923F2BA166D600CC7993 /* CustomButtonView.swift */; };
+		333A92442BA16A0C00CC7993 /* Gradient+ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A92432BA16A0C00CC7993 /* Gradient+ButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		333A92202BA0CDC300CC7993 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		333A92292BA0CE5900CC7993 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		333A923D2BA1057900CC7993 /* CustomBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackgroundView.swift; sourceTree = "<group>"; };
+		333A923F2BA166D600CC7993 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
+		333A92432BA16A0C00CC7993 /* Gradient+ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gradient+ButtonStyle.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 		333A92182BA0CDC100CC7993 /* HikingApp */ = {
 			isa = PBXGroup;
 			children = (
+				333A92412BA169E100CC7993 /* Helpers */,
 				333A92272BA0CDEB00CC7993 /* Views */,
 				333A92192BA0CDC100CC7993 /* HikingApp.swift */,
 				333A921B2BA0CDC100CC7993 /* ContentView.swift */,
@@ -77,8 +82,25 @@
 			children = (
 				333A92292BA0CE5900CC7993 /* CardView.swift */,
 				333A923D2BA1057900CC7993 /* CustomBackgroundView.swift */,
+				333A923F2BA166D600CC7993 /* CustomButtonView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		333A92412BA169E100CC7993 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				333A92422BA169F000CC7993 /* Utility */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		333A92422BA169F000CC7993 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				333A92432BA16A0C00CC7993 /* Gradient+ButtonStyle.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,8 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				333A92402BA166D600CC7993 /* CustomButtonView.swift in Sources */,
 				333A923E2BA1057900CC7993 /* CustomBackgroundView.swift in Sources */,
 				333A922A2BA0CE5900CC7993 /* CardView.swift in Sources */,
+				333A92442BA16A0C00CC7993 /* Gradient+ButtonStyle.swift in Sources */,
 				333A921C2BA0CDC100CC7993 /* ContentView.swift in Sources */,
 				333A921A2BA0CDC100CC7993 /* HikingApp.swift in Sources */,
 			);

@@ -11,10 +11,8 @@ import SwiftUI
 
 private enum Constants {
     enum Circle { static let size: CGFloat = 256 }
-    
-    enum Text {
-        static let titleSize: CGFloat = 52
-    }
+    enum Text { static let titleSize: CGFloat = 52 }
+    enum Header { static let horizontalPadding: CGFloat = 30 }
     
     enum Card {
         static let width: CGFloat = 320
@@ -30,7 +28,22 @@ struct CardView: View {
             CustomBackgroundView()
             
             VStack {
-                Text("Hiking")
+                
+                headerView
+                
+                imageGradientCircle
+                
+                exploreMoreButton
+            }
+        }
+        .frame(width: Constants.Card.width,
+               height: Constants.Card.height)
+    }
+    
+    private var headerView: some View {
+        VStack(alignment: .leading) {
+            HStack {
+                Text(NSLocalizatedString(.title))
                     .fontWeight(.black)
                     .font(.system(size: Constants.Text.titleSize))
                     .foregroundStyle(
@@ -44,33 +57,73 @@ struct CardView: View {
                         )
                     )
                 
-                Text("some")
-                    .multilineTextAlignment(.leading)
-                    .italic()
-                    .foregroundStyle(.colorGrayMedium)
+                Spacer()
                 
-                ZStack {
-                    Circle()
-                        .fill(
-                            LinearGradient(
-                                colors: [
-                                    .colorIndigoMedium,
-                                    .colorOrangeMedium
-                                ],
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                        )
-                        .frame(width: Constants.Circle.size)
-                    
-                    Image(.image1)
-                        .resizable()
-                        .scaledToFit()
+                Button { } label: {
+                    CustomButtonView()
                 }
             }
+            
+            Text(NSLocalizatedString(.description))
+                .multilineTextAlignment(.leading)
+                .italic()
+                .foregroundStyle(.colorGrayMedium)
         }
-        .frame(width: Constants.Card.width,
-               height: Constants.Card.height)
+        .padding(.horizontal, Constants.Header.horizontalPadding)
+    }
+    
+    private var imageGradientCircle: some View {
+        ZStack {
+            Circle()
+                .fill(
+                    LinearGradient(
+                        colors: [
+                            .colorIndigoMedium,
+                            .colorOrangeMedium
+                        ],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    )
+                )
+                .frame(width: Constants.Circle.size)
+            
+            Image(.image1)
+                .resizable()
+                .scaledToFit()
+        }
+    }
+    
+    private var exploreMoreButton: some View {
+        Button { } label: {
+            Text(NSLocalizatedString(.exploreMore))
+                .fontWeight(.heavy)
+                .font(.title2)
+                .foregroundStyle(
+                    LinearGradient(
+                        colors: [
+                            .colorGreenLight,
+                            .colorGreenMedium
+                        ],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                )
+        }
+        .buttonStyle(GradientButton())
+    }
+}
+
+extension CardView {
+    private enum localizatedKey {
+        case title, description, exploreMore
+    }
+    
+    private func NSLocalizatedString(_ key: localizatedKey) -> String {
+        return switch key {
+            case .title: "Hiking"
+            case .description: "Fun and enjoyable outdoor activity for friends and families"
+            case .exploreMore: "Explore More"
+        }
     }
 }
 
