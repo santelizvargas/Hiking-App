@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3310DFDC2BA2C861006A5E09 /* CustomCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3310DFDB2BA2C861006A5E09 /* CustomCircleView.swift */; };
+		3310DFDE2BA2C9FB006A5E09 /* MotionAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3310DFDD2BA2C9FB006A5E09 /* MotionAnimationView.swift */; };
+		3310DFE12BA2E1DB006A5E09 /* MotionAnimationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3310DFE02BA2E1DB006A5E09 /* MotionAnimationConstants.swift */; };
 		333A921A2BA0CDC100CC7993 /* HikingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A92192BA0CDC100CC7993 /* HikingApp.swift */; };
 		333A921C2BA0CDC100CC7993 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A921B2BA0CDC100CC7993 /* ContentView.swift */; };
 		333A921E2BA0CDC300CC7993 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 333A921D2BA0CDC300CC7993 /* Assets.xcassets */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3310DFDB2BA2C861006A5E09 /* CustomCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCircleView.swift; sourceTree = "<group>"; };
+		3310DFDD2BA2C9FB006A5E09 /* MotionAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionAnimationView.swift; sourceTree = "<group>"; };
+		3310DFE02BA2E1DB006A5E09 /* MotionAnimationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionAnimationConstants.swift; sourceTree = "<group>"; };
 		333A92162BA0CDC100CC7993 /* HikingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HikingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		333A92192BA0CDC100CC7993 /* HikingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikingApp.swift; sourceTree = "<group>"; };
 		333A921B2BA0CDC100CC7993 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +46,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3310DFDA2BA2C843006A5E09 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3310DFDF2BA2E1C5006A5E09 /* MotionAnimation */,
+				333A923D2BA1057900CC7993 /* CustomBackgroundView.swift */,
+				333A923F2BA166D600CC7993 /* CustomButtonView.swift */,
+				3310DFDB2BA2C861006A5E09 /* CustomCircleView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3310DFDF2BA2E1C5006A5E09 /* MotionAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				3310DFDD2BA2C9FB006A5E09 /* MotionAnimationView.swift */,
+				3310DFE02BA2E1DB006A5E09 /* MotionAnimationConstants.swift */,
+			);
+			path = MotionAnimation;
+			sourceTree = "<group>";
+		};
 		333A920D2BA0CDC100CC7993 = {
 			isa = PBXGroup;
 			children = (
@@ -81,8 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				333A92292BA0CE5900CC7993 /* CardView.swift */,
-				333A923D2BA1057900CC7993 /* CustomBackgroundView.swift */,
-				333A923F2BA166D600CC7993 /* CustomButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -90,6 +114,7 @@
 		333A92412BA169E100CC7993 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3310DFDA2BA2C843006A5E09 /* Components */,
 				333A92422BA169F000CC7993 /* Utility */,
 			);
 			path = Helpers;
@@ -176,9 +201,12 @@
 				333A92402BA166D600CC7993 /* CustomButtonView.swift in Sources */,
 				333A923E2BA1057900CC7993 /* CustomBackgroundView.swift in Sources */,
 				333A922A2BA0CE5900CC7993 /* CardView.swift in Sources */,
+				3310DFDC2BA2C861006A5E09 /* CustomCircleView.swift in Sources */,
 				333A92442BA16A0C00CC7993 /* Gradient+ButtonStyle.swift in Sources */,
+				3310DFDE2BA2C9FB006A5E09 /* MotionAnimationView.swift in Sources */,
 				333A921C2BA0CDC100CC7993 /* ContentView.swift in Sources */,
 				333A921A2BA0CDC100CC7993 /* HikingApp.swift in Sources */,
+				3310DFE12BA2E1DB006A5E09 /* MotionAnimationConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

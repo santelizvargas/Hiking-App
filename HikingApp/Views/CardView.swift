@@ -10,7 +10,6 @@ import SwiftUI
 // MARK: - View Constants
 
 private enum Constants {
-    enum Circle { static let size: CGFloat = 256 }
     enum Text { static let titleSize: CGFloat = 52 }
     enum Header { static let horizontalPadding: CGFloat = 30 }
     
@@ -87,18 +86,7 @@ struct CardView: View {
             .replacingOccurrences(of: Constants.Image.placeholderName,
                                   with: "\(imageNumber)")
         ZStack {
-            Circle()
-                .fill(
-                    LinearGradient(
-                        colors: [
-                            .colorIndigoMedium,
-                            .colorOrangeMedium
-                        ],
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
-                    )
-                )
-                .frame(width: Constants.Circle.size)
+            CustomCircleView()
             
             Image(imageName)
                 .resizable()
